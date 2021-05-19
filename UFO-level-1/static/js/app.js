@@ -29,10 +29,9 @@ button.on("click", function() {
     var inputElement = d3.select("#datetime");
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
-
     console.log(inputValue);
-
-  var filteredData = people.filter(person => person.bloodType === inputValue);
-
+    // Filter data
+    var filteredData = tableData.filter(sight => sight.bloodType === inputValue);
+    console.log(filteredData);
 
 }
