@@ -7,12 +7,12 @@ var tbody = d3.select("tbody");
 
 
 // Add columns with UFO sighting data
-tableData.forEach(function(ufoSighting) {
-    console.log(ufoSighting);
+tableData.forEach(function(buildTable) {
+    console.log(buildTable);
     //Append a row for each value in our data array
     var row = tbody.append("tr");
     //Use object.entries to grab data from the array
-    Object.entries(ufoSighting).forEach(function([key, value]) {
+    Object.entries(buildTable).forEach(function([key, value]) {
         console.log(key, value);
         //Append text and populate table with cell values
         var cell = row.append("td");
@@ -25,7 +25,7 @@ var button = d3.select("#filter-btn");
 button.on("click", function() {
 
     d3.event.preventDefault();
-        
+
     // Select the input element and get the raw HTML node
     var inputElement = d3.select("#datetime");
     // Get the value property of the input element
