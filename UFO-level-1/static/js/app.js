@@ -1,5 +1,5 @@
 // from data.js
-var tableData = data;
+const tableData = data;
 console.log(tableData);
 
 // Create references to table body
@@ -34,5 +34,7 @@ button.on("click", function() {
     // Filter data
     var filteredData = tableData.filter(sight => sight.datetime === inputValue);
     console.log(filteredData);
-
+//Rebuild the table using the filtered data
+//Tak your filtered data and put into the buildTable to rebuild the table with filtered data
+//function(handleClick)
 });
