@@ -25,7 +25,7 @@ var button = d3.select("#filter-btn");
 button.on("click", function(handleClick) {
 
     d3.event.preventDefault();
-
+    
     // Select the input element and get the raw HTML node
     var inputElement = d3.select("#datetime");
     // Get the value property of the input element
@@ -39,9 +39,12 @@ button.on("click", function(handleClick) {
     //Take your filtered data and put into the buildTable to rebuild the table with filtered data
 
     filteredData.forEach(function(filteredTable) {
-        console.log(filteredData);
+        console.log(filteredTable);
         var row = tbody.append("tr");
-    }
-
-
+        Object.entries(filteredTable).forEach(function([key, value]) {
+            console.log(key, value);
+            var cell = row.append("td");
+            cell.text(value);
+        });
+    });
 });
