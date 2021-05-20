@@ -22,7 +22,7 @@ tableData.forEach(function(buildTable) {
 
 //Select the filter button
 var button = d3.select("#filter-btn");
-button.on("click", function() {
+button.on("click", function(handleClick) {
 
     d3.event.preventDefault();
 
@@ -34,7 +34,14 @@ button.on("click", function() {
     // Filter data
     var filteredData = tableData.filter(sight => sight.datetime === inputValue);
     console.log(filteredData);
-//Rebuild the table using the filtered data
-//Tak your filtered data and put into the buildTable to rebuild the table with filtered data
-//function(handleClick)
+    
+    //Rebuild the table using the filtered data (filteredData)
+    //Take your filtered data and put into the buildTable to rebuild the table with filtered data
+
+    filteredData.forEach(function(filteredTable) {
+        console.log(filteredData);
+        var row = tbody.append("tr");
+    }
+
+
 });
