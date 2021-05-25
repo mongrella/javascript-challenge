@@ -25,7 +25,7 @@ var button = d3.select("#filter-btn");
 button.on("click", function(handleClick) {
 
     d3.event.preventDefault();
-    
+    tbody.html("");
     // Select the input element and get the raw HTML node
     var inputElement = d3.select("#datetime");
     // Get the value property of the input element
